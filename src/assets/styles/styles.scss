@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  outline: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+// pagecontroller
+.page-control {
+  // width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .page-controller {
+    margin-right: 5px;
+    height: 38px;
+    width: 38px;
+    background-color: #2e2e2e;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+
+  .prev,
+  .next {
+    &::before {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      width: 12px;
+      height: 12px;
+      border-left: 1px solid white;
+      border-bottom: 1px solid white;
+    }
+  }
+
+  .prev {
+    &::before {
+      transform: translate(120%, 90%) rotate(45deg);
+    }
+  }
+
+  .next {
+    &::before {
+      transform: translate(80%, 90%) rotate(-135deg);
+    }
+  }
+
+  .drawer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .row1,
+    .row2 {
+      display: flex;
+    }
+
+    .row1 {
+      margin-bottom: 2.5px;
+    }
+
+    .one,
+    .two,
+    .three,
+    .four {
+      height: 4px;
+      width: 4px;
+      border: 1px solid white;
+      margin-right: 2px;
+    }
+  }
+}

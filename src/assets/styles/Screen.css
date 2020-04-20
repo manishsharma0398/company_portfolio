@@ -1,0 +1,123 @@
+.main-content {
+  width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000;
+}
+
+.main-content .share-row {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.main-content .share-row p {
+  font-size: 15px;
+}
+
+.main-content .share-row .share-img {
+  background-color: #2e2e2e;
+  border-radius: 50%;
+  padding: 5px;
+  height: 22px;
+  width: 22px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 5px;
+  opacity: 0.6;
+}
+
+.main-content .share-row .share-img:hover {
+  opacity: 1;
+}
+
+.main-content .share-row .share-img .share_logo {
+  height: 10px;
+  width: 10px;
+}
+
+.main-content-header > .article-title,
+.main-content .main-content-body > .main-content-body-title {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.main-content-header > .article-title {
+  margin-bottom: 10px;
+}
+
+.main-content-header,
+.main-content .page-control {
+  padding: 50px 0 50px 20px;
+}
+
+.main-content-body-title {
+  font-size: 18px;
+  margin-bottom: 21px;
+}
+
+.main-content-body-content {
+  font-size: 13px;
+  margin-bottom: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0.5px;
+}
+
+.main-content-body-footer {
+  font-size: 13px;
+  margin-bottom: 36px;
+}
+
+.main-content-body-footer * {
+  color: white;
+}
+
+.main-content img {
+  width: 100%;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content p {
+  color: #fff;
+}
+
+@media (min-width: 846px) {
+  .main-content {
+    min-width: 720px;
+    margin: 0 auto;
+  }
+  .main-content-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-content-body {
+    width: 612px;
+    margin: 50px 80px;
+  }
+  .main-content .page-control {
+    width: 129px;
+  }
+}
+/*# sourceMappingURL=Screen.css.map */

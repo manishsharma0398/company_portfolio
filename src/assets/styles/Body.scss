@@ -1,0 +1,130 @@
+.body {
+  // margin-left: 60px;
+  background-color: #000;
+
+  .card {
+    cursor: pointer;
+    // margin: 5px 0 0 60px;
+    // height: 526px;
+    width: 450px;
+    // background-color: black;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+
+    &-bg {
+      width: 100%;
+      height: 100%;
+      transition: all 0.5s;
+
+      img {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    &:hover .card-bg,
+    &:focus .card-bg {
+      transform: scale(1.3);
+    }
+
+    .card-bg::before {
+      content: "";
+      display: none;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(30, 31, 32, 0.75);
+    }
+
+    &:hover .card-bg:before,
+    &:focus .card-bg:before {
+      display: block;
+    }
+
+    &-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: all 0.3s;
+
+      h1,
+      p {
+        color: white;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 5px;
+        position: relative;
+
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          width: 22px;
+          height: 2px;
+          background-color: white;
+          color: white;
+          top: 50%;
+          border-radius: 20%;
+        }
+
+        &::before {
+          transform: translate(-140%, -50%);
+        }
+
+        &::after {
+          transform: translate(40%, -50%);
+        }
+      }
+    }
+
+    &:focus .card-content,
+    &:hover .card-content {
+      opacity: 1;
+    }
+  }
+}
+
+.body {
+  display: flex;
+  flex-wrap: wrap;
+  //   padding: 0 4px;
+
+  /* Create four equal columns that sits next to each other */
+  .container {
+    flex: 25%;
+    // max-width: 25%;
+    //   padding: 0 4px;
+
+    .card {
+      //   margin-top: 8px;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
+
+/* Responsive layout - makes a two container-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .body .container {
+    flex: 50%;
+    // max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .body .container {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

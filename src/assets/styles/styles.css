@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  outline: 0;
+}
+
+#root {
+  height: 100vh;
+}
+
+.page-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-control .page-controller {
+  margin-right: 5px;
+  height: 38px;
+  width: 38px;
+  background-color: #2e2e2e;
+  position: relative;
+  cursor: pointer;
+}
+
+.page-control .page-controller:hover {
+  opacity: 0.4;
+}
+
+.page-control .prev::before,
+.page-control .next::before {
+  content: "";
+  position: absolute;
+}
+
+.page-control .prev::before,
+.page-control .next::before {
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.page-control .prev::before {
+  -webkit-transform: translate(120%, 90%) rotate(45deg);
+          transform: translate(120%, 90%) rotate(45deg);
+}
+
+.page-control .next::before {
+  -webkit-transform: translate(80%, 90%) rotate(-135deg);
+          transform: translate(80%, 90%) rotate(-135deg);
+}
+
+.page-control .drawer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page-control .drawer .row1,
+.page-control .drawer .row2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.page-control .drawer .row1 {
+  margin-bottom: 2.5px;
+}
+
+.page-control .drawer .one,
+.page-control .drawer .two,
+.page-control .drawer .three,
+.page-control .drawer .four {
+  height: 4px;
+  width: 4px;
+  border: 1px solid white;
+  margin-right: 2px;
+}
+/*# sourceMappingURL=styles.css.map */
